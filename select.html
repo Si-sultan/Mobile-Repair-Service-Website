@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/select.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;900&family=Rubik:ital,wght@1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;900&family=Rubik:ital,wght@1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- user details area start -->
+    <div class="bannerflex" style="    display: flex;
+    flex-flow: row-reverse;
+    justify-content: flex-end;">
+        <div class="banner" style="display: flex;
+        align-self: center;
+        margin-top: -1rem;
+        margin-left: 12rem;
+        width: 30rem;
+        height: 17rem;">
+            <img src="images/verify.png" alt="">
+        </div>
+        <div class="detail" style="position: relative; right:-5rem;">
+            <p><span>Please</span> Enter you Device Detail</p>
+            <div class="validate">
+
+                <div class="valid">
+                    <label>Enter Your Device Brand Name :</label>
+                    <input type="text" class="valid-input">
+                </div>
+                <div class="valid">
+                    <label>Enter Your Mobile IMEI Number :</label>
+                    <input type="text" class="valid-input" placeholder="hello">
+                </div>
+            </div>
+
+            <label id="select">Do you want a services ?</label>
+            <div class="aligner">
+
+                <div class="valid-select">
+                    <input type="radio" id="radio" name="select" value="Yes" />
+                    <h4>Yes</h4>
+                </div>
+                <div class="valid-select">
+                    <input type="radio" id="radio" name="select" value="No" />
+                    <h4>No</h4>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- user deatil area end -->
+
+    <!-- repair area -->
+    <div class="servicing" id="option">
+        <div class="service-left">
+            <div class="src-cap">
+                <span>Pick Your</span>
+                <div class="repair"> Repair Service</div>
+            </div>
+            <div class="src-container">
+                <div class="LIST">
+                    <div class="src-select" id="item1">
+                        <img src="images/services/screen.png" alt="">
+                        <div class="src-style">
+                            <p>SCREEN</p>
+                            <div class="amount">
+                                <del>₹5,000</del>
+                                <span>₹4,499</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item1)">ADD <span>+</span></button>
+                    </div>
+
+                    <div class="src-select" id="item2">
+                        <img src="images/services/battery.png" alt="">
+                        <div class="src-style">
+                            <p>BATTERY</p>
+                            <div class="amount">
+                                <del>₹1,819</del>
+                                <span>₹1,299</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item2)">ADD <span>+</span></button>
+                    </div>
+
+                    <div class="src-select" id="item3">
+                        <img src="images/services/charging.png" alt="">
+                        <div class="src-style">
+                            <p>CHARGING JACK</p>
+                            <div class="amount">
+                                <del>₹1,299</del>
+                                <span>₹999</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item3)">ADD <span>+</span></button>
+                    </div>
+                </div>
+                <div class="LIST">
+                    <div class="src-select" id="item4">
+                        <img src="images/services/mic.png " width="150px" alt="">
+                        <div class="src-style">
+                            <p>MIC</p>
+                            <div class="amount">
+                                <del>₹1,169</del>
+                                <span>₹899</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item4)">ADD <span>+</span></button>
+                    </div>
+
+                    <div class="src-select" id="item5">
+                        <img src="images/services/auxjack.png" width="150px" alt="">
+                        <div class="src-style">
+                            <p>AUXJACK</p>
+                            <div class="amount">
+                                <del>₹1,169</del>
+                                <span>₹899</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item5)">ADD <span>+</span></button>
+                    </div>
+
+                    <div class="src-select" id="item6">
+                        <img src="images/services/Reciever.png" width="150px" alt="">
+                        <div class="src-style">
+                            <p>RECIEVER</p>
+                            <div class="amount">
+                                <del>₹1,099</del>
+                                <span>₹699</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item6)">ADD <span>+</span></button>
+                    </div>
+                </div>
+
+                <div class="LIST">
+                    <div class="src-select" id="item7">
+                        <img src="images/services/speaker.png" alt="">
+                        <div class="src-style">
+                            <p>MIC</p>
+                            <div class="amount">
+                                <del>₹1,299</del>
+                                <span>₹999</span>
+                            </div>
+                            <div class="know">Know More</div>
+                        </div>
+                        <button onclick="addToCart(item7)">ADD <span>+</span></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="service-right"
+            style="border-left:2px solid rgb(139, 82, 192); margin-left:30px; margin-top: 80px; ">
+            <div class="cart">
+                <div class="cartcap">
+                    <h3>cart</h3>
+
+                </div>
+                <div class="datacart">
+                    <div class="title" id="title">
+
+                    </div>
+                </div>
+            </div>
+            <button id="adddata">COMFIRM BOOKING</button>
+        </div>
+    </div>
+    <!-- repair area end -->
+    <!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a class="link" href="#home"> <i class="fas fa-angle-right"></i> home</a>
+                <a class="link" href="#about"> <i class="fas fa-angle-right"></i> about</a>
+                <a class="link" href="#services"> <i class="fas fa-angle-right"></i> services</a>
+                <a class="link" href="#gallery"> <i class="fas fa-angle-right"></i> gallery</a>
+                <!-- <a class="link" href="#team"> <i class="fas fa-angle-right"></i> team</a> -->
+                <!-- <a class="link" href="#reviews"> <i class="fas fa-angle-right"></i> reviews</a> -->
+                <a class="link" href="#contact"> <i class="fas fa-angle-right"></i> contact</a>
+            </div>
+
+            <div class="box">
+                <h3>opening hours</h3>
+                <p> <span>monday :</span> 10:00am to 00:09pm </p>
+                <p> <span>tuesday :</span> 10:00am to 00:09pm </p>
+                <p> <span>wednesday :</span> 10:00am to 00:09pm </p>
+                <p> <span>thursday :</span> 10:00am to 00:09pm </p>
+                <p> <span>friday :</span> 10:00am to 00:09pm </p>
+                <p> <span>saturday :</span> 10:00am to 00:09pm </p>
+                <p> <span>sunday :</span> closed </p>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="link"> <i class="fas fa-phone"></i> +91 93725-62296 </a>
+                <a href="#" class="link"> <i class="fas fa-phone"></i> +91 01201-01201 </a>
+                <a href="#" class="link"> <i class="fas fa-envelope"></i> SI-Repair@gmail.com </a>
+                <a href="#" class="link"> <i class="fas fa-map"></i> mumbai, india - 400051 </a>
+            </div>
+
+
+
+        </div>
+
+        <div class="credit"> created by <span>Idrisi Sultan Javed</span> | Thanking You </div>
+
+    </section>
+
+    <!-- footer section ends -->
+
+</body>
+<script src="js/select.js"></script>
+
+</html>

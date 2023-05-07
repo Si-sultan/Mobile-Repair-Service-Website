@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        /* .container{
+            display: flex;
+            justify-content: center;
+            padding-top: 7rem;
+        } */
+        body {
+            background: rgb(177, 167, 185);
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+            /* border-radius: 100px; */
+
+        }
+
+        .validation {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            /* padding: 2rem; */
+            background: rgb(157 ,69 , 227);
+            /* border-radius: 1rem; */
+            box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+            width: fit-content;
+            height: 31rem;
+        }
+
+        .validation .banner {
+            display: flex;
+            flex-flow: column;
+            width: fit-content;
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+        }
+
+        .validation .banner img {
+            /* position: relative;
+            bottom: -8.5rem; */
+            display: flex;
+            margin-block-start: auto;
+        }
+
+        .validation .banner .caption {
+            font-weight: 700;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+            font-family: 'Playfair Display', serif;
+
+        }
+
+        .validation .banner span {
+            /* justify-self: center; */
+            font-weight: 900;
+            font-size: 3rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .validation .area {
+            display: flex;
+            padding: 3rem;
+            /* min-height: rem; */
+            background: rgb(214, 238, 229);
+        }
+
+        .validation .area form {
+            display: flex;
+            flex-flow: column;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 90rem;
+        }
+
+        .validation .area form input {
+            /* position: absolute; */
+            /* top: 0; */
+            /* left: 0; */
+            width: 100%;
+            height: 100%;
+            font-size: 12px;
+            border: 1px solid rgb(157 ,69 , 227) ;
+            font-family: 'Ubuntu', sans-serif;
+            border-radius: 0.5rem;
+            outline: none;
+            padding: 1rem;
+            background: none;
+            z-index: 1;
+        }
+
+        .validation .area form label {
+            /* padding: 0 .25rem; */
+            padding-top: 1rem;
+            /* background-color: #fff; */
+            color: rgb(26, 160, 160);
+            font-size: .9rem;
+            transition: .3s;
+            text-transform: capitalize;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            /* align-self:; */
+        }
+
+        .validation .area .contain .select {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10px;
+        }
+
+        .validation .area .contain span {
+            font-weight: 700;
+            padding-top: 20px;
+            color: rgb(50, 58, 65);
+            font-family: 'Source Sans Pro', sans-serif;
+
+            /* margin-top: 10px; */
+
+
+        }
+
+        .validation .area .contain .select .optional {
+            display: flex;
+            /* padding-left: 10px; */
+            /* justify-content: space-between; */
+
+        }
+
+        .validation .area .contain .select .optional p {
+            font-size: .8rem;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: rgb(26, 160, 160);
+
+        }
+
+        .validation .area form .contain button {
+            padding: .5rem;
+            background: aqua;
+            border-radius: .5rem;
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .validation .area form button:hover {
+            background: none;
+            border: 1px solid;
+            color: rgb(26, 160, 160);
+            transition: .5s;
+
+        }
+
+        .container {
+            width: 302px;
+            /* background-color: rgb(151, 103, 196); */
+            border-radius: .4rem;
+            height: 175px;
+            /* position: absolute; */
+            /* bottom: 0px; */
+            margin: auto;
+            padding: 2rem;
+            position: relative;
+            top :2rem;
+        }
+
+        #number,
+        #verificationcode {
+            width: calc(100% - 24px);
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 5px;
+            outline: none;
+        }
+
+        #recaptcha-container {
+            margin-bottom: 5px;
+        }
+
+        #send,
+        #verify {
+            width: 100%;
+            height: 40px;
+            outline: none;
+            background-color: blueviolet;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+        }
+
+        .p-conf,
+        .n-conf {
+            width: calc(100% - 22px);
+            border: 2px solid green;
+            border-radius: 4px;
+            padding: 8px 10px;
+            margin: 4px 0px;
+            background-color: rgba(0, 249, 12, 0.5);
+            display: none;
+        }
+
+        .n-conf {
+            border-color: red;
+            background-color: rgba(255, 0, 4, 0.5);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ragisteration Form </title>
+</head>
+
+<body>
+    <!-- <div class="container"> -->
+    <div class="validation">
+        <div class="banner">
+            <div class="caption">
+                <span>R</span>egistration
+            </div>
+            <img src="images/services/login-repair-banner.svg" alt="">
+        </div>
+        <div class="area">
+            <form action="">
+
+
+                <div class="container">
+                    <div id="sender">
+                        <input type="text" id="number" placeholder="+923...">
+                        <div id="recaptcha-container"></div>
+                        <input type="button" id="send" value="Send" onClick="phoneAuth()">
+                    </div>
+                    <div id="verifier" style="display: none">
+                        <input type="text" id="verificationcode" placeholder="OTP Code">
+                        <input type="button" id="verify" value="Verify" onClick="codeverify()">
+                        <div class="p-conf">Number Verified</div>
+                        <div class="n-conf">OTP ERROR</div>
+                    </div>
+                    <a href="index.html"><i class="fa-sharp fa-solid fa-arrow-right" style="padding:1rem;font-weight: 700; font-size: 1.5rem; border-radius:50%; background-color:blueviolet; color:white; position:relative; top:7rem; left:19rem;"></i></a>
+                </div>
+            </form>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js"></script>
+
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyCKbuJIJQdtHbuBMEZTLu7GZnwjLoXusQ4",
+                authDomain: "authentication-9b62c.firebaseapp.com",
+                projectId: "authentication-9b62c",
+                storageBucket: "authentication-9b62c.appspot.com",
+                messagingSenderId: "717749883964",
+                appId: "1:717749883964:web:5993b23de77ee252869f39",
+                measurementId: "G-GV8R9DKFBS"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            render();
+            function render() {
+                window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+                recaptchaVerifier.render();
+            }
+            // function for send message
+            function phoneAuth() {
+                var number = document.getElementById('number').value;
+                firebase.auth().signInWithPhoneNumber(number, window.recaptchaVerifier).then(function (confirmationResult) {
+                    window.confirmationResult = confirmationResult;
+                    coderesult = confirmationResult;
+                    document.getElementById('sender').style.display = 'none';
+                    document.getElementById('verifier').style.display = 'block';
+                }).catch(function (error) {
+                    alert(error.message);
+                });
+            }
+            // function for code verify
+            function codeverify() {
+                var code = document.getElementById('verificationcode').value;
+                coderesult.confirm(code).then(function () {
+                    document.getElementsByClassName('p-conf')[0].style.display = 'block';
+                    document.getElementsByClassName('n-conf')[0].style.display = 'none';
+                    Element.setAttribute("href","index.html");
+
+
+                }).catch(function () {
+                    document.getElementsByClassName('p-conf')[0].style.display = 'none';
+                    document.getElementsByClassName('n-conf')[0].style.display = 'block';
+                })
+            }
+        </script>
+
+        <!-- </div> -->
+
+
+</body>
+<!-- <script type="module" src="js/login.js"></script> -->
+<!-- <script src="js/login.js"></script> -->
+
+</html>
